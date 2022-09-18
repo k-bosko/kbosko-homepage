@@ -1,0 +1,17 @@
+{
+    "name": "kbosko-homepage",
+    "version": "1.0.0",
+    "description": "homepage for Katerina Bosko",
+    "private": true,
+    "author": "Katerina Bosko",
+    "license": "MIT",
+    "scripts": {
+      "prettier": "npx prettier --write .",
+      "lint": "eslint",
+      "lint:fix": "npm run lint -- --fix"
+    },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "prettier": "^2.7.1"
+  }
+}
