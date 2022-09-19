@@ -1,0 +1,25 @@
+.hero {
+  background-image: url("../images/bg.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.white-box {
+  background-color: white;
+  border: solid;
+  width: 60vh;
+  height: 20vh;
+  position: relative;
+  margin-top: 40vh;
+  margin-left: 20vh;
+}
+
+h1 {
+  text-align:center;
+  padding-top: 2%;
+}
