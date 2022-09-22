@@ -1,4 +1,25 @@
-#intro {
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  position: fixed;
+  align-content: flex-end;
+  font-size: larger;
+  top: 3px;
+  right: 15px;
+  z-index: 9997;
+}
+
+.header a {
+  color: black;
+}
+.header a:hover {
+  color: #C8433E;
+}
+/*--------------------------------------------------------------
+# home
+--------------------------------------------------------------*/
+.home {
   width: 100%;
   height: 100vh;
   background: url("../images/bg.jpg") right no-repeat;
@@ -7,35 +28,25 @@
   background-attachment: fixed;
 }
 
-#hero:before {
-  content: "";
-  background: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#intro .white-box {
+.home .white-box {
   background-color: white;
   border: solid;
   position: relative;
 }
 
 @media screen and (min-width: 992px) {
-  #intro {
+  .home {
     padding-left: 300px;
     padding-top: 320px;
   }
 
-  #intro .white-box {
+  .home .white-box {
     width: 60vh;
     height: 22vh;
   }
 }
 
-#intro h1 {
+.home h1 {
   font-size: 46px;
   text-align: left;
   padding-top: 3%;
@@ -43,24 +54,23 @@
   font-family: "Special Elite", Arial, Helvetica, sans-serif;
 }
 
-#intro p {
-  color: #45505b;
-  font-size: 26px;
-  font-family: "Courier New", sans-serif;
+.home p {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
   padding-left: 4%;
 }
 
-#intro p span {
-  color: #eb6f63;
+.home p span {
+  color: #C8433E;
   letter-spacing: 1px;
   padding-left: 4%;
 }
 
-#intro .social-links {
+.home .social-links {
   margin-top: 30px;
 }
 
-#intro .social-links a {
+.home .social-links a {
   font-size: 1.5rem;
   display: inline-block;
   line-height: 1;
@@ -69,33 +79,34 @@
   color: #000;
 }
 
-#intro .social-links a:hover {
-  color: #eb6f63;
+.home .social-links a:hover {
+  color: #C8433E;
 }
 
 @media (max-width: 992px) {
-  #hero {
+  .hero {
     text-align: center;
   }
 
-  #hero h1 {
+  .hero h1 {
     font-size: 32px;
     line-height: 36px;
   }
 
-  #hero p {
+  .hero p {
     margin-top: 10px;
     font-size: 20px;
     line-height: 24px;
   }
 
-  #intro {
+  .home {
     padding-left: 150px;
     padding-top: 160px;
   }
 
-  #intro .white-box {
+  .home .white-box {
     width: 60vh;
     height: 22vh;
   }
 }
+
