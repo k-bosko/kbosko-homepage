@@ -11,18 +11,38 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <!-- Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special%20Elite|Montserrat" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special%20Elite|Montserrat|Lato|Raleway" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#scrollspy-nav">
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <header class="header d-flex flex-column">
         <!-- ======= Header ======= -->
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-decoration-none" href="#home">Home</a>
-            <a class="me-3 py-2 text-decoration-none" href="#about">About</a>
-            <a class="me-3 py-2 text-decoration-none" href="#resume">Resume</a>
-            <a class="me-3 py-2 text-decoration-none" href="/portfolio.html">Portfolio</a>
+        <nav class="navbar navbar-expand-lg .justify-content-end">
+            <div id="scrollspy-nav" class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active flex-sm-fill text-sm-center" href="#home">{ Home }</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex-sm-fill text-sm-center" href="#about">{ About }</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex-sm-fill text-sm-center" href="#resume">{ Resume }</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link flex-sm-fill text-sm-center" href="/portfolio.html">{ Portfolio }</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
     <!-- End Header -->
@@ -42,26 +62,87 @@
     <main>
         <!-- ======= About Section ======= -->
         <section id="about">
-            <div class="container" data-aos="fade-up">
+            <div class="container">
                 <div class="section-title">
                     <h2>About</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="assets/images/profile-img.jpg" class="img-fluid" alt="profile-img-katerina-bosko">
+                    </div>
+                    <div class="col-lg-8 pt-4 pt-lg-0 content">
+                        <h3>Data Engineer.</h3>
+                        <p>I'm a Master's student in Computer Science at Northeastern University (Silicon Valley
+                            campus), graduating in May 2023. After an exceptional internship experience, I will join the
+                            USAA as a Data Engineer in January 2023. <br>
+                            I'm passionate about Data Analytics and Data Science and recently discovered that I enjoy
+                            coding. Since Data Engineering is at the intersection of both Data Science and Software
+                            Engineering - both fields that I love - I decided to concentrate in Data Engineering.<br>
+                            My skills include:
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Python</strong></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>AWS</strong> </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Machine Learning</strong></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Databases</strong></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Git</strong> </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>SQL</strong></li>
+                                </ul>
+                            </div>
+                            <h3>Lifelong Learner.</h3>
+                            <p>Before enrolling to my Master's program, I got a PhD in Political Science and worked as a
+                                Managing Editor for online analytical journal. During my previous career in academia, I
+                                developed strong analytical, communication and management skills.<br>
+                                I'm the person who stays curious. I love learning and I thrive in the MOOC-era.<br>
+                                Here are few examples of online courses I took:
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <ul>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May
+                                                1995</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                                            <span>www.example.com</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456
+                                                7890</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York,
+                                                USA</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>
+                                            <span>Master</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong>
+                                            <span>email@example.com</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                                            <span>Available</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section><!-- End About -->
+        <!-- ======= Resume Section ======= -->
+        <section id="resume">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Resume</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
             </div>
-        </section><!-- End About -->
-      <!-- ======= Resume Section ======= -->
-      <section id="resume">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Resume</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                    sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                    ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-            </div>
-        </div>
-    </section><!-- End Resume -->
+        </section><!-- End Resume -->
 
     </main><!-- End main -->
 
