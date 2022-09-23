@@ -8,9 +8,12 @@ body {
 p {
   text-align: justify;
   font-size: large;
+  color: black;
 }
-ul li {
-  font-size: large;
+
+h3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /*--------------------------------------------------------------
@@ -97,48 +100,18 @@ ul li {
   padding-left: 4%;
 }
 
-.home .social-links {
-  margin-top: 30px;
-}
 
 .home .social-links a {
   font-size: 1.5rem;
   display: inline-block;
   line-height: 1;
   text-align: center;
-  padding-left: 4%;
+  padding-left: 1.5rem;
   color: #000;
 }
 
 .home .social-links a:hover {
   color: #C8433E;
-}
-
-@media (max-width: 992px) {
-  .hero {
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    line-height: 36px;
-  }
-
-  .hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .home {
-    padding-left: 150px;
-    padding-top: 160px;
-  }
-
-  .home .white-box {
-    width: 60vh;
-    height: 22vh;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -164,15 +137,55 @@ section {
   position: relative;
 }
 
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 10px;
+  left: calc(50% - 60px);
+}
+
+
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 #about .content h3 {
   font-weight: 700;
   font-size: 26px;
+  color: #872525;
 }
 
 #about .content ul {
   list-style: none;
-  padding: 0;
+  font-size: large;
 }
+
+#about .content a {
+  /* color: #C8433E; */
+  text-decoration: none;
+  color: black;
+}
+
+#about .content a:hover {
+  /* color: #C8433E; */
+  text-decoration: underline;
+  color: black;
+}
+
+#about .carousel-item{
+  width: 100%; /*width you want*/
+  height: 80vh; /*height you want*/
+  overflow: hidden;
+}
+
+#about .carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
