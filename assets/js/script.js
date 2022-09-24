@@ -32,34 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // callback for reset
     resetCallback: function () { },
   });
-});
 
-
-(function () {
-  "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
-
-  /**
-   * Easy on scroll event listener
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
   /**
      * Back to top button
      */
-  let backtotop = select('.back-to-top')
+  let backtotop = document.querySelector('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
@@ -68,7 +45,46 @@ document.addEventListener("DOMContentLoaded", () => {
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
+    document.onscroll = toggleBacktotop
   }
-})()
+
+  /**
+   * Porfolio isotope and filter
+   */
+  const portfolioContainer = document.querySelector('.portfolio-container');
+  if (portfolioContainer) {
+    const portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.portfolio-item'
+    });
+
+    const allPortfolioFilters = document.querySelectorAll('.portfolio-filters li')
+    allPortfolioFilters.forEach((el) => {
+      el.onclick = (event) => {
+        event.preventDefault();
+
+        allPortfolioFilters.forEach((el) => {
+          el.classList.remove('filter-active');
+        });
+
+        event.target.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: event.target.getAttribute('data-filter')
+        });
+
+        portfolioIsotope.on('arrangeComplete', function () {
+          AOS.refresh()
+        });
+      }
+    });
+  }
+
+  /**
+     * Initiate portfolio details lightbox
+     */
+  const portfolioDetailsLightbox = GLightbox({
+    selector: '.portfolio-details-lightbox',
+    width: '90%',
+    height: '70vh',
+  });
+});

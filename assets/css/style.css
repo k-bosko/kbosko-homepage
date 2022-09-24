@@ -5,6 +5,7 @@ body {
   font-family: "Raleway", sans-serif;
   position: relative;
 }
+
 p {
   text-align: justify;
   font-size: large;
@@ -14,6 +15,11 @@ p {
 h3 {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+ul {
+  list-style: none;
+  font-size: large;
 }
 
 /*--------------------------------------------------------------
@@ -31,7 +37,6 @@ h3 {
   color: black;
 }
 .header a:hover {
-  /* color: #C8433E; */
   text-decoration: underline;
   color: black;
 }
@@ -48,12 +53,13 @@ h3 {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   background-color: transparent;
-  color:  #C8433E;
+  /* color:  #872525; */
+  color: #C8433E;
 }
 /*--------------------------------------------------------------
 # home
 --------------------------------------------------------------*/
-.home {
+#home {
   width: 100%;
   height: 100vh;
   background: url("../images/bg.jpg") right no-repeat;
@@ -117,14 +123,9 @@ h3 {
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding: 60px 0;
 }
 
 .section-title h2 {
@@ -160,11 +161,6 @@ section {
   color: #872525;
 }
 
-#about .content ul {
-  list-style: none;
-  font-size: large;
-}
-
 #about .content a {
   /* color: #C8433E; */
   text-decoration: none;
@@ -177,6 +173,9 @@ section {
   color: black;
 }
 
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
 #about .carousel-item{
   width: 100%; /*width you want*/
   height: 80vh; /*height you want*/
@@ -187,6 +186,49 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+#portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+#portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio .portfolio-filters li:hover {
+  text-decoration: underline;
+}
+#portfolio .portfolio-filters li.filter-active {
+  color: #C8433E;
+}
+
+#portfolio .portfolio-container h4 {
+  display: inline;
+  margin-top: 30px;
+}
+
+#portfolio .portfolio-container i {
+  font-size: x-large;
 }
 
 
@@ -200,9 +242,9 @@ section {
   color: #fff;
 }
 
-
-
-
+.footer a:hover i, .footer .btn:hover {
+  color: #597F85;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
