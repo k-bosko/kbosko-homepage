@@ -53,7 +53,6 @@ ul {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   background-color: transparent;
-  /* color:  #872525; */
   color: #C8433E;
 }
 /*--------------------------------------------------------------
@@ -177,8 +176,8 @@ ul {
 # Carousel
 --------------------------------------------------------------*/
 #about .carousel-item{
-  width: 100%; /*width you want*/
-  height: 80vh; /*height you want*/
+  width: 100%;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -231,6 +230,14 @@ ul {
   font-size: x-large;
 }
 
+.portfolio-item a:hover {
+  background-color: transparent;
+  color: #C8433E;
+}
+
+.portfolio-item a {
+  color: black;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -276,4 +283,16 @@ ul {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio-Details
+--------------------------------------------------------------*/
+.portfolio-image {
+  height: 90vh;
+}
+
+.portfolio-image img{
+  height: 100%;
+  width: auto;
 }
