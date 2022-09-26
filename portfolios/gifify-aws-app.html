@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="favicon.ico">
+    <title>Portfolio Details - Katerina Bosko Homepage</title>
+    <meta content="portfolio-details" name="description">
+    <meta content="portfolio,data-engineer,computer-science,katerina-bosko" name="keywords">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <!-- Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="gifify">
+          <div class="container">
+            <div  class="row gy-4">
+              <div class="col-lg-6">
+                <div>
+                    <img src="../assets/images/portfolio/gif/gifify.gif" class="img-fluid pt-5" alt="gifify-app">
+                </div>
+              </div>
+              <div class="col-lg-6 pt-5">
+                <div class="project-info">
+                  <h3>Gifify AWS App</h3>
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i><strong>Docker</strong></li>
+                    <li><i class="bi bi-chevron-right"></i><strong>AWS S3, EC2, Lambda, ECS, DynamoDB</strong></li>
+                    <li><i class="bi bi-chevron-right"></i><strong>Flask</strong></li>
+                  </ul>
+                </div>
+                <div class="project-description">
+                  <p>
+                    I developed a Gifify app where a user can upload a video and get it processed into a gif. This is a Flask app deployed to AWS EC2 instance. The user login data is saved into DynamoDB, while the users’ uploaded videos and resulting gifs are stored on S3 buckets. The video processing is implemented through a Lambda function (deployed via Docker to ECS).</p>
+                </div>
+                <div class="project-links">
+                    <a class="btn btn-light mb-2" href="https://github.com/k-bosko/gifify" role="button" target="_blank">Code</a>
+                  </div>
+              </div>
+            </div>
+        </section>
+        <!-- End Portfolio Details Section -->
+      </main>
+      <!-- End #main -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+</body>
+
+</html>

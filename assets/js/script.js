@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   /**
-     * Back to top button - Vanilla JavaScript
-     */
-   let backtotop = document.querySelector('.back-to-top')
-   if (backtotop) {
-     const toggleBacktotop = () => {
-       if (window.scrollY > 100) {
-         backtotop.classList.add('active')
-       } else {
-         backtotop.classList.remove('active')
-       }
-     }
-     document.onscroll = toggleBacktotop
-   }
+   * Back to top button - Vanilla JavaScript
+   */
+  let backtotop = document.querySelector(".back-to-top");
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add("active");
+      } else {
+        backtotop.classList.remove("active");
+      }
+    };
+    document.onscroll = toggleBacktotop;
+  }
 
   /**
-     * Typed string in index.html - Typed JavaScript library
-     */
+   * Typed string in index.html - Typed JavaScript library
+   */
   const _typed = new Typed(".typed", {
     strings: ["Data Engineer.", "Lifelong Learner.", "Explorer."],
     // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
@@ -42,52 +42,54 @@ document.addEventListener("DOMContentLoaded", () => {
     // either html or text
     contentType: "html",
     // call when done callback function
-    callback: function () { },
+    callback: function () {},
     // starting callback function before each string
-    preStringTyped: function () { },
+    preStringTyped: function () {},
     //callback for every typed string
-    onStringTyped: function () { },
+    onStringTyped: function () {},
     // callback for reset
-    resetCallback: function () { },
+    resetCallback: function () {},
   });
 
   /**
    * Porfolio filter - Isotope JavaScript library
    */
-  const portfolioContainer = document.querySelector('.portfolio-container');
+  const portfolioContainer = document.querySelector(".portfolio-container");
   if (portfolioContainer) {
     const portfolioIsotope = new Isotope(portfolioContainer, {
-      itemSelector: '.portfolio-item'
+      itemSelector: ".portfolio-item",
     });
 
-    const allPortfolioFilters = document.querySelectorAll('.portfolio-filters li')
+    const allPortfolioFilters = document.querySelectorAll(
+      ".portfolio-filters li"
+    );
     allPortfolioFilters.forEach((el) => {
       el.onclick = (event) => {
         event.preventDefault();
 
         allPortfolioFilters.forEach((el) => {
-          el.classList.remove('filter-active');
+          el.classList.remove("filter-active");
         });
 
-        event.target.classList.add('filter-active');
+        event.target.classList.add("filter-active");
 
         portfolioIsotope.arrange({
-          filter: event.target.getAttribute('data-filter')
+          filter: event.target.getAttribute("data-filter"),
         });
 
-        portfolioIsotope.on('arrangeComplete', function () {
-          AOS.refresh()
+        portfolioIsotope.on("arrangeComplete", function () {
+          AOS.refresh();
         });
-      }
+      };
     });
   }
 
   /**
-     * Portfolio Details - Glightbox JavaScript library
-     */
+   * Portfolio Details - Glightbox JavaScript library
+   */
   const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '70vh',
+    selector: ".portfolio-details-lightbox",
+    width: "90%",
+    height: "70vh",
   });
 });
