@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /**
-     * Back to top button
+     * Back to top button - Vanilla JavaScript
      */
   let backtotop = document.querySelector('.back-to-top')
   if (backtotop) {
