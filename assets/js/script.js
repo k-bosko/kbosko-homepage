@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /**
+     * Back to top button - Vanilla JavaScript
+     */
+   let backtotop = document.querySelector('.back-to-top')
+   if (backtotop) {
+     const toggleBacktotop = () => {
+       if (window.scrollY > 100) {
+         backtotop.classList.add('active')
+       } else {
+         backtotop.classList.remove('active')
+       }
+     }
+     document.onscroll = toggleBacktotop
+   }
+
+  /**
+     * Typed string in index.html - Typed JavaScript library
+     */
   const _typed = new Typed(".typed", {
     strings: ["Data Engineer.", "Lifelong Learner.", "Explorer."],
     // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
@@ -34,22 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /**
-     * Back to top button - Vanilla JavaScript
-     */
-  let backtotop = document.querySelector('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    document.onscroll = toggleBacktotop
-  }
-
-  /**
-   * Porfolio isotope and filter
+   * Porfolio filter - Isotope JavaScript library
    */
   const portfolioContainer = document.querySelector('.portfolio-container');
   if (portfolioContainer) {
@@ -80,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-     * Initiate portfolio details lightbox
+     * Portfolio Details - Glightbox JavaScript library
      */
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
